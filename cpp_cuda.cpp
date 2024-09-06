@@ -1,3 +1,6 @@
+
+#include <utils.h>
+
 #include <torch/extension.h>
 #include <iostream>
 
@@ -7,8 +10,10 @@ torch::Tensor trilinear_interpolation(
     torch::Tensor point 
 )
 {
+    CHECK_INPUT(feats);
+    CHECK_INPUT(point);
     std::cout << "hello" << std::endl;
-    return feats;
+    return trilinear_fw_cu(feats, point);// feats;
 
 }
 

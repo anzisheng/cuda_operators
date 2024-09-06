@@ -20,7 +20,7 @@ setup(
     ext_modules=[
         CUDAExtension(
             name='cppcuda_tutorial',
-            sources=['cpp_cuda.cpp'],
+            sources=sources, #['cpp_cuda.cpp'],
             include_dirs=include_dirs,
             extra_compile_args={'cxx': ['-O2'],
                                 'nvcc': ['-O2']}
