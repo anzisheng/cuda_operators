@@ -1,5 +1,4 @@
 #include <torch/extension.h>
-
 #include <iostream>
 
 using namespace std;
@@ -8,6 +7,7 @@ torch::Tensor trilinear_interpolation(
     torch::Tensor point 
 )
 {
+    std::cout << "hello" << std::endl;
     return feats;
 
 }
